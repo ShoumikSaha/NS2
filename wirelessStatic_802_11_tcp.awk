@@ -118,6 +118,7 @@ END{
 #		printf("%d %15.5f\n", i, retransmit[i]);
 	}
 
+	print (" ",rThroughput, rPacketDeliveryRatio, rPacketDropRatio) >> "gnuTest.dat"
 
 	printf( "Throughput: %15.2f\nAverageDelay: %15.5f\nSent Packets: %15.2f\nReceived Packets: %15.2f\nDrop Packets: %15.2f\nPacket Delivery Ratio: %10.2f\nPacket Drop Ratio: %10.2f\nTime: %10.5f\n", rThroughput, rAverageDelay, nSentPackets, nReceivedPackets, nDropPackets, rPacketDeliveryRatio, rPacketDropRatio,rTime) ;
 	printf("Total Energy Consumption: %15.5f\nAvg Energy Per Bit: %15.5f\nAvg Energy Per Byte: %15.5f\nAvg Energy Per Packet: %15.5f\nTotal Retransmit: %15.0f\n", total_energy_consumption, avg_energy_per_bit, avg_energy_per_byte, avg_energy_per_packet, total_retransmit);

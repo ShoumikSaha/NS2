@@ -95,11 +95,15 @@ set dist(1000m) 1.42681e-12
 #Phy/WirelessPhy set RXThresh_ $dist([lindex $argv 3]m)
 
 #######################################################
+set num_nodes [expr $num_row * $num_col]
+set plotFile [open "gnuTest.dat" "a"]
 
 puts "parallel flow is set to [lindex $argv 1]"
 puts "packets per second is set to [lindex $argv 2]"
 #puts "[expr 1.00/[lindex $argv 2]]"
 #puts "Tx_range is set to [lindex $argv 3]"
+puts -nonewline $plotFile  "$num_nodes [lindex $argv 1] [lindex $argv 2]"
+close $plotFile
 
 #############################################################NODE CONFIGURATION
 $ns node-config -adhocRouting $val(rp) -llType $val(ll) \

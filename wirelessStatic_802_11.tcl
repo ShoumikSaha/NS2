@@ -8,8 +8,8 @@ set y_dim 1000
 set num_row 10 ;#number of row
 set num_col 10 ;#number of column
 
-set time_duration 50 ;#50
-set start_time 100 ;#100
+set time_duration 25 ;#50
+set start_time 50 ;#100
 set parallel_start_gap 1.0
 #set cross_start_gap 0.0
 
